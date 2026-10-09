@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Steam Hand Build Checklist</title>
+  <meta name="description" content="Build checklist and materials for a 3D-printed Iron Man-style hand that vents cool &quot;steam&quot; from an ultrasonic mist maker.">
+  <meta name="theme-color" content="#0d0b0c">
+  <meta property="og:title" content="Steam Hand Build Checklist">
+  <meta property="og:description" content="A battery-safe way to get steam venting from a 3D-printed hand. Build steps + materials.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#checklist">Skip to checklist</a>
+  <header class="hero">
+    <div class="wrap">
+      <div class="reactor" aria-hidden="true"><span></span></div>
+      <p class="meta"><time datetime="2026-10-07">Oct 7, 2026</time> · by @Manji</p>
+      <h1>Steam Hand <span>Build Checklist</span></h1>
+      <p class="intro">A cool, battery-safe way to get “steam” venting from a 3D-printed hand: an ultrasonic mist maker instead of real heat, so there’s no burn risk and no need for heat-shielding materials.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="checklist" aria-labelledby="checklist-h">
+      <div class="sec-head">
+        <h2 id="checklist-h">Build checklist</h2>
+        <p class="progress" aria-live="polite"><span id="done">0</span>/6 done</p>
+      </div>
+      <div class="bar" aria-hidden="true"><span id="bar-fill"></span></div>
+      <ol class="steps">
+        <li><label class="check"><input type="checkbox" data-step="1"><span class="box" aria-hidden="true"></span><span class="num">01</span><span class="txt">Source parts: ultrasonic mist maker disc, small 5–12V fan, battery pack, wiring</span></label></li>
+        <li><label class="check"><input type="checkbox" data-step="2"><span class="box" aria-hidden="true"></span><span class="num">02</span><span class="txt">Design and 3D print the hand with a sealed, watertight reservoir in the palm and vent holes in the fingers or knuckles</span></label></li>
+        <li><label class="check"><input type="checkbox" data-step="3"><span class="box" aria-hidden="true"></span><span class="num">03</span><span class="txt">Test the reservoir for leaks with plain water before adding electronics</span></label></li>
+        <li><label class="check"><input type="checkbox" data-step="4"><span class="box" aria-hidden="true"></span><span class="num">04</span><span class="txt">Mount the mist disc in the reservoir, submerged under water, and wire it to the battery</span></label></li>
+        <li><label class="check"><input type="checkbox" data-step="5"><span class="box" aria-hidden="true"></span><span class="num">05</span><span class="txt">Mount the fan behind the reservoir, aimed at the vents, and wire it in</span></label></li>
+        <li><label class="check"><input type="checkbox" data-step="6"><span class="box" aria-hidden="true"></span><span class="num">06</span><span class="txt">Dry-run the fog flow outside the hand, then seal everything inside and test the full assembly</span></label></li>
+      </ol>
+      <button type="button" id="reset" class="reset">Reset checklist</button>
+    </section>
+
+    <section aria-labelledby="materials-h">
+      <h2 id="materials-h">Materials to use</h2>
+
+      <h3>Interior materials</h3>
+      <div class="table-wrap">
+      <table>
+        <caption class="sr-only">Interior materials</caption>
+        <thead><tr><th scope="col">Part</th><th scope="col">Material</th><th scope="col">Why</th></tr></thead>
+        <tbody>
+          <tr><th scope="row" data-label="Part">Reservoir / internal shell</th><td data-label="Material">PETG filament</td><td data-label="Why">Watertight-friendly, tougher and more heat-tolerant than PLA</td></tr>
+          <tr><th scope="row" data-label="Part">Reservoir seal</th><td data-label="Material">Silicone sealant or O-ring gasket</td><td data-label="Why">Keeps water from leaking into electronics</td></tr>
+          <tr><th scope="row" data-label="Part">Vent channels</th><td data-label="Material">PETG or ABS</td><td data-label="Why">Holds shape, smooth finish helps fog flow</td></tr>
+          <tr><th scope="row" data-label="Part">Mist source</th><td data-label="Material">Ultrasonic mist maker disc (piezo transducer)</td><td data-label="Why">Makes cool fog, no heat involved</td></tr>
+          <tr><th scope="row" data-label="Part">Airflow</th><td data-label="Material">Small 5–12V DC fan</td><td data-label="Why">Pushes fog out through the vents</td></tr>
+          <tr><th scope="row" data-label="Part">Power</th><td data-label="Material">3.7V–12V battery pack (rechargeable Li-ion recommended)</td><td data-label="Why">Powers disc and fan safely at low voltage</td></tr>
+          <tr><th scope="row" data-label="Part">Wiring/insulation</th><td data-label="Material">Heat-shrink tubing, silicone-sleeved wire</td><td data-label="Why">Basic protection even though no real heat is involved</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>Exterior materials</h3>
+      <div class="table-wrap">
+      <table>
+        <caption class="sr-only">Exterior materials</caption>
+        <thead><tr><th scope="col">Part</th><th scope="col">Material</th><th scope="col">Why</th></tr></thead>
+        <tbody>
+          <tr><th scope="row" data-label="Part">Outer shell / armour plates</th><td data-label="Material">PLA or PLA+</td><td data-label="Why">Easiest to print cleanly, good detail for Iron Man plating</td></tr>
+          <tr><th scope="row" data-label="Part">High-wear outer joints</th><td data-label="Material">PETG or ABS</td><td data-label="Why">More impact- and flex-resistant where fingers articulate</td></tr>
+          <tr><th scope="row" data-label="Part">Surface finish</th><td data-label="Material">Filler primer + acrylic spray paint</td><td data-label="Why">Hides print lines, gives a smooth metallic look</td></tr>
+          <tr><th scope="row" data-label="Part">Metallic look</th><td data-label="Material">Metallic or chrome-effect spray paint, or vinyl wrap</td><td data-label="Why">Classic Iron Man finish</td></tr>
+          <tr><th scope="row" data-label="Part">Vent trim</th><td data-label="Material">Heat-resistant silicone or rubber trim</td><td data-label="Why">Lets fog escape without cracking paint over time</td></tr>
+          <tr><th scope="row" data-label="Part">Fasteners</th><td data-label="Material">M2/M3 screws and heat-set brass inserts</td><td data-label="Why">Lets you open the hand for battery changes and repairs</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>Steam Hand Build Checklist · by @Manji</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
