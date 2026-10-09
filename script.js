@@ -15,7 +15,7 @@
     update();
   }
   function logIn(name){
-    user=name; who.textContent=name;
+    user=name; who.textContent=name; document.getElementById("avatar").textContent=name[0]; document.getElementById("owner").textContent=name+"’s "; document.body.dataset.user=name;
     try{localStorage.setItem("steam-hand-user",name);}catch(e){}
     login.classList.add("hidden"); document.body.classList.remove("locked"); load();
   }

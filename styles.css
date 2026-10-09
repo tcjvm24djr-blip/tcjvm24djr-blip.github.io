@@ -80,6 +80,10 @@ body.locked{overflow:hidden}
 .login-btns{display:grid;gap:12px}
 .login-btns button{font:inherit;font-weight:700;font-size:1.1rem;padding:14px;border-radius:12px;border:1px solid var(--red);background:linear-gradient(180deg,var(--red2),var(--red));color:#fff;cursor:pointer}
 .login-btns button:active{transform:scale(.98)}
-.userbar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px;background:var(--panel2);border-bottom:1px solid var(--line);color:var(--muted);font-size:.95rem}
-.userbar b{color:var(--gold)}
-.userbar button{font:inherit;font-size:.9rem;padding:6px 12px;border-radius:999px;border:1px solid var(--gold);background:transparent;color:var(--gold);cursor:pointer}
+.userbar{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;background:linear-gradient(90deg,var(--red),#7a0f1a);border-bottom:3px solid var(--gold);box-shadow:0 4px 18px rgba(200,32,47,.45);color:#fff}
+.ub-left{display:flex;align-items:center;gap:12px}
+.ub-left small{display:block;font-size:.7rem;letter-spacing:.12em;color:var(--gold2);font-weight:700}
+.ub-left b{display:block;font-size:1.6rem;line-height:1.1;color:#fff}
+.avatar{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:1.4rem;color:var(--bg);background:var(--gold);box-shadow:0 0 0 3px rgba(255,215,122,.35),0 0 16px var(--gold)}
+.userbar button{font:inherit;font-weight:700;font-size:.9rem;padding:9px 14px;border-radius:999px;border:2px solid var(--gold);background:rgba(0,0,0,.25);color:var(--gold2);cursor:pointer;white-space:nowrap}
+#owner{color:var(--gold)}
