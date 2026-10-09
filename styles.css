@@ -68,3 +68,18 @@ tbody td:last-child{color:var(--muted)}
 }
 .foot{padding:36px 20px 48px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);margin-top:40px}
 .foot p{margin:0}
+
+/* login */
+body.locked{overflow:hidden}
+.login{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:24px;background:radial-gradient(circle at 50% 30%,#2a0d12 0%,var(--bg) 70%)}
+.login.hidden{display:none}
+.login-card{width:100%;max-width:360px;text-align:center;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:28px 22px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.login-card .reactor{margin:0 auto 14px}
+.login-card h2{margin:0 0 6px;color:var(--gold);font-size:1.5rem}
+.login-card p{margin:0 0 20px;color:var(--muted)}
+.login-btns{display:grid;gap:12px}
+.login-btns button{font:inherit;font-weight:700;font-size:1.1rem;padding:14px;border-radius:12px;border:1px solid var(--red);background:linear-gradient(180deg,var(--red2),var(--red));color:#fff;cursor:pointer}
+.login-btns button:active{transform:scale(.98)}
+.userbar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px;background:var(--panel2);border-bottom:1px solid var(--line);color:var(--muted);font-size:.95rem}
+.userbar b{color:var(--gold)}
+.userbar button{font:inherit;font-size:.9rem;padding:6px 12px;border-radius:999px;border:1px solid var(--gold);background:transparent;color:var(--gold);cursor:pointer}
