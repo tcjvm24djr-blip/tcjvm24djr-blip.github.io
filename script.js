@@ -21,10 +21,22 @@
   }
   function logOut(){
     user=null; try{localStorage.removeItem("steam-hand-user");}catch(e){}
-    login.classList.remove("hidden"); document.body.classList.add("locked");
+    login.classList.remove("hidden"); document.body.classList.add("locked"); showPicker();
   }
+  var H={"Josh": "c9d1f3632f422c6a1d8b2b15d6e6a2ac15760b7e2d0000056b50877394ed9c0d", "Quadri": "8de331547d4fdc371a289553d32945d01ccc50eae504a74d9f4b42666abb1746", "Nasser": "143169ab59bf1068255cb039956479498b7efa74bb205856b95d886e4587e622"};
+  var btns=document.querySelector(".login-btns"), form=document.getElementById("pwform"),
+      pwIn=document.getElementById("pw"), pwName=document.getElementById("pw-name"), err=document.getElementById("pw-err"), pick=null;
+  function hex(buf){return [].map.call(new Uint8Array(buf),function(x){return ("0"+x.toString(16)).slice(-2);}).join("");}
+  function showPicker(){pick=null;form.classList.add("hidden");btns.classList.remove("hidden");err.textContent="";pwIn.value="";}
   [].forEach.call(document.querySelectorAll("[data-user]"),function(btn){
-    btn.addEventListener("click",function(){logIn(btn.dataset.user);});
+    btn.addEventListener("click",function(){pick=btn.dataset.user;pwName.textContent=pick;btns.classList.add("hidden");form.classList.remove("hidden");err.textContent="";pwIn.value="";pwIn.focus();});
+  });
+  document.getElementById("pw-back").addEventListener("click",showPicker);
+  form.addEventListener("submit",function(e){
+    e.preventDefault(); if(!pick)return;
+    crypto.subtle.digest("SHA-256",new TextEncoder().encode("steamhand:"+pick+":"+pwIn.value)).then(function(d){
+      if(hex(d)===H[pick]){var u=pick;showPicker();logIn(u);} else {err.textContent="Wrong password";pwIn.value="";pwIn.focus();}
+    });
   });
   document.getElementById("switch").addEventListener("click",logOut);
   boxes.forEach(function(b){

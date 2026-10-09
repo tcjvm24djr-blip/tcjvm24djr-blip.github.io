@@ -22,6 +22,13 @@
         <button type="button" data-user="Nasser">Nasser</button>
         <button type="button" data-user="Quadri">Quadri</button>
       </div>
+      <form id="pwform" class="pwform hidden" autocomplete="off">
+        <p class="pw-for">Password for <b id="pw-name"></b></p>
+        <input id="pw" type="password" placeholder="Password" autocapitalize="off" autocorrect="off" spellcheck="false">
+        <p id="pw-err" class="pw-err" aria-live="polite"></p>
+        <button type="submit" class="pw-go">Log in</button>
+        <button type="button" id="pw-back" class="pw-back">Back</button>
+      </form>
     </div>
   </div>
   <div class="userbar"><div class="ub-left"><span class="avatar" id="avatar">?</span><div><small>LOGGED IN AS</small><b id="who">—</b></div></div><button type="button" id="switch">Switch user</button></div>
